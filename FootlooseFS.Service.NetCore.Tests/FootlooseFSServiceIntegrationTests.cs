@@ -19,7 +19,6 @@ namespace FootlooseFS.Service.IntegrationTests
         {
             options = Options.Create(new FootlooseFSConfiguration
             {
-                AppPath = AppContext.BaseDirectory,
                 SQLConnectionString = "FootlooseFS.sqlite3"
             });
         }        

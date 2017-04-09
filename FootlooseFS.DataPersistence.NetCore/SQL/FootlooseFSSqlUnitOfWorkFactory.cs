@@ -1,4 +1,5 @@
-﻿using FootlooseFS.Models;
+﻿using System;
+using FootlooseFS.Models;
 using Microsoft.Extensions.Options;
 
 namespace FootlooseFS.DataPersistence
@@ -14,7 +15,7 @@ namespace FootlooseFS.DataPersistence
 
         public IFootlooseFSUnitOfWork CreateUnitOfWork()
         {
-            var connectionString = string.Format("Data Source={0}/{1}", options.Value.AppPath, options.Value.SQLConnectionString);            
+            var connectionString = string.Format("Data Source={0}/{1}", AppContext.BaseDirectory, options.Value.SQLConnectionString);            
             return new FootlooseFSSqlUnitOfWork(connectionString);
         }
     }
