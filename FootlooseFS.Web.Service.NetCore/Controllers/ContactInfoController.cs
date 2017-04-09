@@ -1,7 +1,6 @@
 ﻿using FootlooseFS.Models;
 using FootlooseFS.Service;
 using FootlooseFS.Web.Service.Models;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;

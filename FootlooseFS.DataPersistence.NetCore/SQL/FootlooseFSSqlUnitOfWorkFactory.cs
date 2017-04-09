@@ -14,7 +14,8 @@ namespace FootlooseFS.DataPersistence
 
         public IFootlooseFSUnitOfWork CreateUnitOfWork()
         {
-            return new FootlooseFSSqlUnitOfWork(options.Value.SQLConnectionString);
+            var connectionString = string.Format("Data Source={0}/{1}", options.Value.AppPath, options.Value.SQLConnectionString);            
+            return new FootlooseFSSqlUnitOfWork(connectionString);
         }
     }
 }

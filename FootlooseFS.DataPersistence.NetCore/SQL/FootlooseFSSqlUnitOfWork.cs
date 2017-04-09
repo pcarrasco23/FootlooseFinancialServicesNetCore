@@ -1,6 +1,5 @@
 ﻿using System;
 using FootlooseFS.Models;
-using Microsoft.Extensions.Options;
 
 namespace FootlooseFS.DataPersistence
 {

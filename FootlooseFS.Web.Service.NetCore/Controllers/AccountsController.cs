@@ -2,8 +2,6 @@
 using FootlooseFS.Service;
 using FootlooseFS.Web.Service.Models;
 using System.Linq;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 
 namespace FootlooseFS.Web.Service.Controllers

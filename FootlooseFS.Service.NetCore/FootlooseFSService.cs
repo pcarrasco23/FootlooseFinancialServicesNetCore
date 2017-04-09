@@ -22,16 +22,7 @@ namespace FootlooseFS.Service
 
             this.options = options;
         }
-
-        public PageOfList<PersonDocument> SearchPersonDocuments(int pageNumber, int numRecordsInPage, string sort, SortDirection sortDirection, PersonDocument searchCriteria)
-        {
-            // Note the Document Unit of Work will be disposed when out of scope (does not require using statement)
-            var unitOfWork = new FootlooseFSDocUnitOfWork(options.Value.MongoDBConectionString);
-
-            // Search, sort, and page the results
-            return unitOfWork.Persons.Search(pageNumber, numRecordsInPage, searchCriteria, sort, sortDirection);
-        }
-
+        
         public Person GetPersonByUsername(string userName, PersonIncludes personIncludes)
         {
             using (var unitOfWork = unitOfWorkFactory.CreateUnitOfWork())

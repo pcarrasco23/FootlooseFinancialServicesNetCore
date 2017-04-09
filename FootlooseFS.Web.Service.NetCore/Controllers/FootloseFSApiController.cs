@@ -1,5 +1,4 @@
-﻿using System.Security.Claims;
-using FootlooseFS.Service;
+﻿using FootlooseFS.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Linq;

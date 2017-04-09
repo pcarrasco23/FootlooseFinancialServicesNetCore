@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -18,29 +19,10 @@ namespace FootlooseFS.Service.IntegrationTests
         {
             options = Options.Create(new FootlooseFSConfiguration
             {
-                MongoDBConectionString = "mongodb://localhost",
-                SQLConnectionString = ""
+                AppPath = AppContext.BaseDirectory,
+                SQLConnectionString = "FootlooseFS.sqlite3"
             });
-        }
-
-        [TestMethod]
-        public void TestPersonDocumentSearch()
-        {
-            var uowFactory = new FootlooseFSSqlUnitOfWorkFactory(options);
-            
-            var service = new FootlooseFSService(uowFactory, options);
-
-            var searchCriteria = new PersonDocument();
-            searchCriteria.State = "NY";
-
-            var pageOfListPersonDocuments = service.SearchPersonDocuments(1, 10, "LastName", SortDirection.Ascending, searchCriteria);
-
-            // Verify that only 10 records or less are returned
-            Assert.IsTrue(pageOfListPersonDocuments.Data.Count <= 10);
-
-            // Verify that only NY state record are returned
-            Assert.IsFalse(pageOfListPersonDocuments.Data.Any(p => p.State != "NY"));
-        }
+        }        
 
         [TestMethod]
         public void TestUpdatePerson()

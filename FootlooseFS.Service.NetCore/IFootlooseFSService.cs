@@ -1,27 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using FootlooseFS.DataPersistence;
-using FootlooseFS.Models;
+﻿using FootlooseFS.Models;
 
 namespace FootlooseFS.Service
 {
     public interface IFootlooseFSService
-    {
-        /// <summary>     
-        /// SearchPersonDocuments - Return a collection of PersonDocument objects that uses paging   
-        /// </summary>
-        /// <param name="pageNumber"></param>
-        /// <param name="sort"></param>
-        /// <param name="sortDirection"></param>
-        /// <param name="numRecordsInPage"></param>
-        /// <param name="criteria"></param>
-        /// <returns></returns>
-        PageOfList<PersonDocument> SearchPersonDocuments(int pageNumber, int numRecordsInPage, string sort, SortDirection sortDirection, PersonDocument searchCriteria);
-
+    {        
         /// <summary>
         /// GetPersonById - Return the Person entity indentified by the personID
         /// </summary>
