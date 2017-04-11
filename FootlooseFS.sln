@@ -1,44 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{747C7717-71FE-4156-A7FF-22BA89FA4ACC}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FootlooseFS.Web.Client", "http://localhost:52389", "{5F8EF47E-4272-4EB6-B2D3-F88696C13512}"
-	ProjectSection(WebsiteProperties) = preProject
-		UseIISExpress = "true"
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_52389"
-		Debug.AspNetCompiler.PhysicalPath = "FootlooseFS.Web.Client\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52389\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_52389"
-		Release.AspNetCompiler.PhysicalPath = "FootlooseFS.Web.Client\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52389\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "FootlooseFS.Web.Client\"
-		DefaultWebSiteLanguage = "Visual Basic"
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootlooseFS.Models.NetCore", "FootlooseFS.Models.NetCore\FootlooseFS.Models.NetCore.csproj", "{086C86EF-66B2-4E6E-9500-C7AD6E35FE41}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FootlooseFS.Models.NetCore", "FootlooseFS.Models.NetCore\FootlooseFS.Models.NetCore.xproj", "{086C86EF-66B2-4E6E-9500-C7AD6E35FE41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootlooseFS.DataPersistence.NetCore", "FootlooseFS.DataPersistence.NetCore\FootlooseFS.DataPersistence.NetCore.csproj", "{E9A8FD4A-4ACF-423C-9224-F73031F3AA49}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FootlooseFS.DataPersistence.NetCore", "FootlooseFS.DataPersistence.NetCore\FootlooseFS.DataPersistence.NetCore.xproj", "{E9A8FD4A-4ACF-423C-9224-F73031F3AA49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootlooseFS.Service.NetCore", "FootlooseFS.Service.NetCore\FootlooseFS.Service.NetCore.csproj", "{6433AD24-EF0B-40D0-A42A-A8A5711B962F}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FootlooseFS.Service.NetCore", "FootlooseFS.Service.NetCore\FootlooseFS.Service.NetCore.xproj", "{6433AD24-EF0B-40D0-A42A-A8A5711B962F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootlooseFS.Web.Service.NetCore", "FootlooseFS.Web.Service.NetCore\FootlooseFS.Web.Service.NetCore.csproj", "{78BC52CA-E4CD-4D7D-BBF5-C5DE3CAB5CA3}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FootlooseFS.Web.Service.NetCore", "FootlooseFS.Web.Service.NetCore\FootlooseFS.Web.Service.NetCore.xproj", "{78BC52CA-E4CD-4D7D-BBF5-C5DE3CAB5CA3}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FootlooseFS.Service.NetCore.Tests", "FootlooseFS.Service.NetCore.Tests\FootlooseFS.Service.NetCore.Tests.xproj", "{DB38353A-CA81-4350-B107-900AFF43E391}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootlooseFS.Service.NetCore.Tests", "FootlooseFS.Service.NetCore.Tests\FootlooseFS.Service.NetCore.Tests.csproj", "{DB38353A-CA81-4350-B107-900AFF43E391}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,10 +24,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5F8EF47E-4272-4EB6-B2D3-F88696C13512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F8EF47E-4272-4EB6-B2D3-F88696C13512}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F8EF47E-4272-4EB6-B2D3-F88696C13512}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F8EF47E-4272-4EB6-B2D3-F88696C13512}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{086C86EF-66B2-4E6E-9500-C7AD6E35FE41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{086C86EF-66B2-4E6E-9500-C7AD6E35FE41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{086C86EF-66B2-4E6E-9500-C7AD6E35FE41}.Release|Any CPU.ActiveCfg = Release|Any CPU
