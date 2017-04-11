@@ -1,16 +1,21 @@
 #!/bin/bash
 cd FootlooseFS.Models.NetCore
+dotnet restore
 dotnet build
 cd ..
 cd FootlooseFS.DataPersistence.NetCore
+dotnet restore
 dotnet build
 cd ..
 cd FootlooseFS.Service.NetCore
+dotnet restore
 dotnet build
 cd ..
 cd FootlooseFS.Service.NetCore.Tests
+dotnet restore
 dotnet build
 cd ..
 cd FootlooseFS.Web.Service.NetCore
+dotnet restore
 dotnet build
 cd ..
