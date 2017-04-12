@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Newtonsoft.Json.Serialization;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace FootlooseFS.Web.Service.NetCore
 {
@@ -90,7 +91,12 @@ namespace FootlooseFS.Web.Service.NetCore
 
             app.UseCors("CorsPolicy");
 
-            app.UseMvc();
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
+
+            app.UseMvc();            
         }
     }
 }
