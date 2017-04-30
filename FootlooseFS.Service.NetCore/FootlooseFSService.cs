@@ -299,7 +299,7 @@ namespace FootlooseFS.Service
             }
             catch (Exception e)
             {
-                return OperationStatus.CreateFromException("Error deleting person.", e);
+                return OperationStatus.CreateFromException("Error in the enrollment process.", e);
             }
         }
     }

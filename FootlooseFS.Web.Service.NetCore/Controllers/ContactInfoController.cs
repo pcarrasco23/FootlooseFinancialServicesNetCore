@@ -48,7 +48,7 @@ namespace FootlooseFS.Web.Service.Controllers
         }
 
         // POST: /api/contactinfo
-        public void Post([FromBody] ContactInfoViewModel contactInfoViewModel)
+        public OperationStatus Post([FromBody] ContactInfoViewModel contactInfoViewModel)
         {
             // Get Person data model from the data service
             // we do not need account nor transactions
@@ -97,11 +97,7 @@ namespace FootlooseFS.Web.Service.Controllers
             // Update the data store
             var oppStatus = service.UpdatePerson(person);
 
-            // Return success or error state
-            if (!oppStatus.Success)
-            {
-                throw new Exception(oppStatus.Messages[0]);
-            }
+            return oppStatus;
         }
     }
 }

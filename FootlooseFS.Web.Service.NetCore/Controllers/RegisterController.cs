@@ -12,7 +12,7 @@ namespace FootlooseFS.Web.Service.Controllers
 
         // POST: api/register
         [AllowAnonymous]
-        public void Post([FromBody] RegisterViewModel registerViewModel)
+        public OperationStatus Post([FromBody] RegisterViewModel registerViewModel)
         {
             var enrollmentRequest = new EnrollmentRequest
             {
@@ -24,11 +24,7 @@ namespace FootlooseFS.Web.Service.Controllers
 
             var oppStatus = service.Enroll(enrollmentRequest);
 
-            // Return success or error state
-            if (!oppStatus.Success)
-            {
-                throw new Exception(oppStatus.Messages[0]);
-            }
+            return oppStatus;
         }
     }
 }
