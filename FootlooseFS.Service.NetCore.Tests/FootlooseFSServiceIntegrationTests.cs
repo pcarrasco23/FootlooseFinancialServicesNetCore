@@ -18,7 +18,8 @@ namespace FootlooseFS.Service.IntegrationTests
         public void Setup()
         {            options = Options.Create(new FootlooseFSConfiguration
             {
-                SQLConnectionString = "FootlooseFS.sqlite3"
+                SQLConnectionString = "FootlooseFS.sqlite3",
+                AllowUpdates = true
             });
         }        
 
