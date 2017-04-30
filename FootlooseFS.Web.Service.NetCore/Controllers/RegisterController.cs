@@ -10,7 +10,7 @@ namespace FootlooseFS.Web.Service.Controllers
     {
         public RegisterController(IFootlooseFSService service, Microsoft.AspNetCore.Http.IHttpContextAccessor httpContextAccessor) : base(service, httpContextAccessor) { }
 
-        // PUT: api/register
+        // POST: api/register
         [AllowAnonymous]
         public void Post([FromBody] RegisterViewModel registerViewModel)
         {

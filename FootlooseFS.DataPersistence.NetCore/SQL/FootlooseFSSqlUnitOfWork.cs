@@ -16,10 +16,12 @@ namespace FootlooseFS.DataPersistence
         protected SqlRepository<PersonAccount> _personAccounts;
         protected SqlRepository<AccountTransaction> _accountTransactions;
         protected SqlRepository<PersonLogin> _personLogins;
+        protected readonly bool allowUpdates;
 
-        public FootlooseFSSqlUnitOfWork(string connectionString)
+        public FootlooseFSSqlUnitOfWork(string connectionString, bool allowUpdates)
         {
             _dbContext = new FootlooseFSDBContext(connectionString);
+            this.allowUpdates = allowUpdates;
         }
 
         public IRepository<Member> Members
@@ -134,7 +136,8 @@ namespace FootlooseFS.DataPersistence
 
         public void Commit()
         {
-            _dbContext.SaveChanges();
+            if (allowUpdates)
+                _dbContext.SaveChanges();
         }
 
         public void Dispose()

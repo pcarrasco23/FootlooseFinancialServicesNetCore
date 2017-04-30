@@ -10,7 +10,7 @@ namespace FootlooseFS.Web.Service.Controllers
     {
         public ChangePasswordController(IFootlooseFSService service, IHttpContextAccessor httpContextAccessor) : base(service, httpContextAccessor) { }
 
-        // PUT: api/changepassword
+        // POST: api/changepassword
         public void Post([FromBody] ChangePasswordViewModel changePasswordViewModel)
         {
             var oppStatus = service.UpdatePassword(authenticatedUser, changePasswordViewModel.OldPassword, changePasswordViewModel.NewPassword);
