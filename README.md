@@ -21,3 +21,36 @@ cd FootlooseFinancialServicesNetCore
 ./runApi.sh
 
 By default the web service will listen on port 5000
+
+The API consists of the following methods:
+/Login
+/api/register
+/api/accounts
+/api/contactinfo
+/api/changepassword
+
+To test any of these methods of the service open another temrinal window and install curl:
+
+sudo apt-get install curl
+
+Then run the following curl command to test the Login (the demo user is avenere and the password is Avenere1!):
+
+curl -H "Content-Type: application/x-www-form-urlencoded" -X POST -d 
+'userName=avenere&password=Avenere1!' http://localhost:5000/Login
+
+The API will respond with a JWT (JSON Web Token)
+
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhdmVuZXJlIiwianRpIjoiM2VmZWM2YmYtYTA4Yy00MTllLTllMTAtMTVmMzc4YzdmNDM2IiwiaWF0IjotNjIxMzU1OTY4MDAsIlVzZXJOYW1lIjoiYXZlbmVyZSIsImV4cCI6MTQ5NDMxMTg2NH0.dUTv1dVqcqROYRzSuSG5SMXUuTZ6igFA2FK7GzF-RCI",
+  "expires_in": 1000
+}
+
+The /api/accounts method requires a valid, non-expired JWT from the Login. 
+To test the method run the following command:
+
+curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInRI6IkpXVCJ9.eyJzdWIiOiJhdmVuZXJlIiwianRpIjoiM2VmZWM2YmYtYTA4Yy00MTllLTllMTAtMTVmMzc4YzdmNDM2IiwiaWF0IjotNjIxMzU1OTY4MDAsIlVzZXJOYW1lIjoiYXZlbmVyZSIsImV4cCI6MTQ5NDMxMTg2NH0.dUTv1dVqcqROYRzSuSG5SMXUuTZ6igFA2FK7GzF-RCI" -X GET http://localhost:5000/api/accounts
+
+Replace the ciphertext in the command with the access_token value that you received in the Login output.
+The output from the command wil be JSON containing the user's account and transaction information.
+
+
