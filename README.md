@@ -1,3 +1,8 @@
+This project is a port of service API feature of FootlooseFinancialServices .NET project to .NET Core on Linux.
+Essentially this project is a Web API written in .NET Core 1.1 using a SQLite3 database. Other technologies that are 
+utilized are Entity Framework for .NET Core and JWT (JSON Web tokens).
+
+
 # How to build on Ubuntu Linux
 
 ## Install git (if necessary)
