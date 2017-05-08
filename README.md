@@ -22,6 +22,8 @@ cd FootlooseFinancialServicesNetCore
 
 By default the web service will listen on port 5000
 
+## Testing the API over HTTP
+
 The API consists of the following methods:
 /Login
 /api/register
