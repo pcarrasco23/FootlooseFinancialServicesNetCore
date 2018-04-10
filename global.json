@@ -1,8 +1,0 @@
-{
-	"projects":[
-		"FootlooseFS.Models.NetCore",
-		"FootlooseFS.DataPersistence.NetCore",
-		"FootlooseFS.Service.NetCore",
-		"FootlooseFS.Web.Service.NetCore"
-	]
-}

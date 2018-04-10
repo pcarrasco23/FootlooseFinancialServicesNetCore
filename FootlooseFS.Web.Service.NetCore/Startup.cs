@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Newtonsoft.Json.Serialization;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace FootlooseFS.Web.Service.NetCore
 {
@@ -62,12 +63,6 @@ namespace FootlooseFS.Web.Service.NetCore
             services.AddTransient<IFootlooseFSService, FootlooseFSService>();
             services.AddTransient<IFootlooseFSUnitOfWorkFactory, FootlooseFSSqlUnitOfWorkFactory>();
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-        }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
-        {
-            app.UseDeveloperExceptionPage();
 
             var tokenValidationParameters = new TokenValidationParameters
             {
@@ -82,14 +77,25 @@ namespace FootlooseFS.Web.Service.NetCore
                 ClockSkew = TimeSpan.Zero
             };
 
-            app.UseJwtBearerAuthentication(new JwtBearerOptions
+            services.AddAuthentication(options =>
             {
-                AutomaticAuthenticate = true,
-                AutomaticChallenge = true,
-                TokenValidationParameters = tokenValidationParameters
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.Audience = Configuration.GetSection("TokenProviderOptions:Audience").Value;
+                options.ClaimsIssuer = Configuration.GetSection("TokenProviderOptions:Issuer").Value;
+                options.TokenValidationParameters = tokenValidationParameters;
+                options.SaveToken = true;
             });
+        }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        {
+            app.UseDeveloperExceptionPage();
 
             app.UseCors("CorsPolicy");
+            app.UseAuthentication();
 
             app.UseForwardedHeaders(new ForwardedHeadersOptions
             {

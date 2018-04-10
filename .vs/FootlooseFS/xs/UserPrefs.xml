@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{78BC52CA-E4CD-4D7D-BBF5-C5DE3CAB5CA3}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FootlooseFS.Web.Service.NetCore/Startup.cs">
+    <Files>
+      <File FileName="FootlooseFS.Service.NetCore/FootlooseFSService.cs" Line="1" Column="10" />
+      <File FileName="FootlooseFS.Web.Service.NetCore/Startup.cs" Line="18" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FootlooseFS.Web.Service.NetCore PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

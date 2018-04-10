@@ -1,22 +1,15 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{747C7717-71FE-4156-A7FF-22BA89FA4ACC}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\packages.config = .nuget\packages.config
-	EndProjectSection
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseFS.Web.Service.NetCore", "FootlooseFS.Web.Service.NetCore\FootlooseFS.Web.Service.NetCore.csproj", "{F4226BAA-609D-465A-908F-C72A6937B388}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootlooseFS.Models.NetCore", "FootlooseFS.Models.NetCore\FootlooseFS.Models.NetCore.csproj", "{086C86EF-66B2-4E6E-9500-C7AD6E35FE41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseFS.Models.NetCore", "FootlooseFS.Models.NetCore\FootlooseFS.Models.NetCore.csproj", "{8AB9CEC9-BB10-468A-ABA8-F43E0EAB078E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootlooseFS.DataPersistence.NetCore", "FootlooseFS.DataPersistence.NetCore\FootlooseFS.DataPersistence.NetCore.csproj", "{E9A8FD4A-4ACF-423C-9224-F73031F3AA49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseFS.DataPersistence.NetCore", "FootlooseFS.DataPersistence.NetCore\FootlooseFS.DataPersistence.NetCore.csproj", "{8044032A-1D53-4848-B040-69187EC46667}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootlooseFS.Service.NetCore", "FootlooseFS.Service.NetCore\FootlooseFS.Service.NetCore.csproj", "{6433AD24-EF0B-40D0-A42A-A8A5711B962F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseFS.Service.NetCore", "FootlooseFS.Service.NetCore\FootlooseFS.Service.NetCore.csproj", "{58103BF3-1FDE-46C3-81A4-89D438FBB387}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootlooseFS.Web.Service.NetCore", "FootlooseFS.Web.Service.NetCore\FootlooseFS.Web.Service.NetCore.csproj", "{78BC52CA-E4CD-4D7D-BBF5-C5DE3CAB5CA3}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FootlooseFS.Service.NetCore.Tests", "FootlooseFS.Service.NetCore.Tests\FootlooseFS.Service.NetCore.Tests.csproj", "{DB38353A-CA81-4350-B107-900AFF43E391}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseFS.Service.NetCore.Tests", "FootlooseFS.Service.NetCore.Tests\FootlooseFS.Service.NetCore.Tests.csproj", "{ABA7B0FF-8D6A-4FDC-B191-CD400D665F71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,28 +17,25 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{086C86EF-66B2-4E6E-9500-C7AD6E35FE41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{086C86EF-66B2-4E6E-9500-C7AD6E35FE41}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{086C86EF-66B2-4E6E-9500-C7AD6E35FE41}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{086C86EF-66B2-4E6E-9500-C7AD6E35FE41}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9A8FD4A-4ACF-423C-9224-F73031F3AA49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9A8FD4A-4ACF-423C-9224-F73031F3AA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9A8FD4A-4ACF-423C-9224-F73031F3AA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9A8FD4A-4ACF-423C-9224-F73031F3AA49}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6433AD24-EF0B-40D0-A42A-A8A5711B962F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6433AD24-EF0B-40D0-A42A-A8A5711B962F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6433AD24-EF0B-40D0-A42A-A8A5711B962F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6433AD24-EF0B-40D0-A42A-A8A5711B962F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78BC52CA-E4CD-4D7D-BBF5-C5DE3CAB5CA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78BC52CA-E4CD-4D7D-BBF5-C5DE3CAB5CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78BC52CA-E4CD-4D7D-BBF5-C5DE3CAB5CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78BC52CA-E4CD-4D7D-BBF5-C5DE3CAB5CA3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DB38353A-CA81-4350-B107-900AFF43E391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB38353A-CA81-4350-B107-900AFF43E391}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB38353A-CA81-4350-B107-900AFF43E391}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB38353A-CA81-4350-B107-900AFF43E391}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+		{F4226BAA-609D-465A-908F-C72A6937B388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4226BAA-609D-465A-908F-C72A6937B388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4226BAA-609D-465A-908F-C72A6937B388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4226BAA-609D-465A-908F-C72A6937B388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB9CEC9-BB10-468A-ABA8-F43E0EAB078E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB9CEC9-BB10-468A-ABA8-F43E0EAB078E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB9CEC9-BB10-468A-ABA8-F43E0EAB078E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB9CEC9-BB10-468A-ABA8-F43E0EAB078E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8044032A-1D53-4848-B040-69187EC46667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8044032A-1D53-4848-B040-69187EC46667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8044032A-1D53-4848-B040-69187EC46667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8044032A-1D53-4848-B040-69187EC46667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58103BF3-1FDE-46C3-81A4-89D438FBB387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58103BF3-1FDE-46C3-81A4-89D438FBB387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58103BF3-1FDE-46C3-81A4-89D438FBB387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58103BF3-1FDE-46C3-81A4-89D438FBB387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA7B0FF-8D6A-4FDC-B191-CD400D665F71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA7B0FF-8D6A-4FDC-B191-CD400D665F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA7B0FF-8D6A-4FDC-B191-CD400D665F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA7B0FF-8D6A-4FDC-B191-CD400D665F71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

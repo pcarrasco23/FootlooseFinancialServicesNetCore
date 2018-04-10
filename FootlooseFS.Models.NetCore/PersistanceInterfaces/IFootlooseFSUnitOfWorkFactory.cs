@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Options;
-
-namespace FootlooseFS.Models
+﻿namespace FootlooseFS.Models
 {
     public interface IFootlooseFSUnitOfWorkFactory
     {
