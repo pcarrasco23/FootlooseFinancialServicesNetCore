@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="homeIndex">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Footloose Financial Service</title>
+   
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- xeditable CSS -->
+    <link href="assets/css/xeditable.css" rel="stylesheet">
+
+    <!-- Icon Fonts -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/flexslider.css" rel="stylesheet">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+
+    <!-- Template core CSS -->
+    <link href="assets/css/vertical.min.css" rel="stylesheet">
+    <link href="assets/css/template.css" rel="stylesheet">
+    <link href="assets/css/footloose.css" rel="stylesheet">
+
+    <script>    
+        var accessToken = sessionStorage.getItem("accessToken");
+        if (accessToken == null || typeof accessToken == "undefined")
+            location.href = "/home.html";
+
+        function logout() {
+            sessionStorage.removeItem("accessToken");
+
+            location.href = "/home.html";
+        }        
+    </script>
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div class="page-loader">
+        <div class="loader">Loading...</div>
+    </div>
+    <!-- /PRELOADER -->
+
+    <!-- HEADER -->
+    <header class="header js-stick">
+        <div class="container">
+            <!-- YOUR LOGO HERE -->
+            <div class="inner-header">
+                <a class="inner-brand" href="/#/">Footloose Financial Services</a>
+            </div>
+
+            <!-- OPEN MOBILE MENU -->
+            <div class="main-nav-toggle">
+                <div class="nav-icon-toggle" data-toggle="collapse" data-target="#custom-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+            </div>
+
+            <div class="inner-header">
+                <div class="menu-extras clearfix">
+
+                    <div class="menu-item">
+                        <div class="extras-cart">
+                            <a href="/#/contactinfo">Contact Information</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="extras-cart">
+                            <a href="/#/changepassword">Change Password</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="extras-cart">
+                            <a href="" onclick="logout();">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <!-- HEADER -->
+  
+    <div class="wrapper">
+        
+        <section class="module">
+            <div class="container">
+
+                <h2>Welcome, <span id="firstName">&nbsp;</span>&nbsp;<span id="lastName">&nbsp;</span></h2>
+
+                <div data-ng-view=""></div>
+
+            </div>
+        </section>        
+    </div>    
+
+    <div id="footer" />
+
+    <script src="config.js"></script>
+
+    <script src="assets/js/modernizr-2.6.2.js"></script>
+    <script src="assets/js/jquery-2.2.3.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/custom.min.js"></script>
+
+    <script src="config.js"></script>
+
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+
+    <script src="assets/js/footloosefs/login.js"></script>
+    <script src="assets/js/footloosefs/dataService.js"></script>
+   
+    <script src="assets/js/xeditable.min.js"></script>   
+
+    <script src="assets/js/footloosefs/module.js"></script>    
+    <script src="assets/js/footloosefs/dataService.js"></script>
+    <script src="assets/js/footloosefs/homeIndexController.js"></script>
+    <script src="assets/js/footloosefs/contactInfoController.js"></script>
+    <script src="assets/js/footloosefs/changePasswordController.js"></script>  
+    
+    <script>
+        $('.nav li a').click(function (e) {
+            var $this = $(this);
+            if (!$this.parent().hasClass('active')) {
+                $('.nav li.active').removeClass('active');
+                $this.parent().addClass('active');
+            }
+        });
+
+        if (location.hash == '#/contactinfo') {
+            $('.nav li#contactInfo').addClass('active');
+        }
+        else if (location.hash == '#/changepassword') {
+            $('.nav li#changePassword').addClass('active');
+        }
+        else {
+            $('.nav li#homeIndex').addClass('active');
+        }
+
+        $('span#firstName').html(sessionStorage.getItem("firstName"));
+        $('span#lastName').html(sessionStorage.getItem("lastName"));
+
+        $('#footer').load("footer.html");
+    </script>
+  
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="register">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Footloose Financial Service</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Icon Fonts -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/simple-line-icons.css" rel="stylesheet" />
+
+    <!-- Plugins -->
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.css" rel="stylesheet" />
+    <link href="assets/css/flexslider.css" rel="stylesheet" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+
+    <!-- Template core CSS -->
+    <link href="assets/css/vertical.min.css" rel="stylesheet" />
+    <link href="assets/css/template.css" rel="stylesheet" />   
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div class="page-loader">
+        <div class="loader">Loading...</div>
+    </div>
+    <!-- /PRELOADER -->    
+    <header class="header js-stick">
+        <div class="container" style="padding-left:30px !important;margin-right:0 !important; margin-left:0 !important;">           
+            <div class="inner-header">
+                <a class="inner-brand" href="home.html">Footloose Financial Services</a>
+            </div>           
+        </div>
+    </header>
+
+    <!-- PAGE TITLE -->
+    <section class="module-sm bg-white-dark">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h3 class="montserrat text-uppercase m-b-10">Registration</h3>                    
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- END PAGE TITLE -->
+   
+    <div data-ng-view="" />
+
+    <div id="footer" />
+
+    <script src="config.js"></script>
+
+    <script src="assets/js/modernizr-2.6.2.js"></script>
+    <script src="assets/js/jquery-2.2.3.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/custom.min.js"></script>
+
+    <script src="config.js"></script>
+
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+
+    <script src="assets/js/footloosefs/register.js"></script>
+    <script src="assets/js/footloosefs/dataService.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#footer').load("footer.html");
+        });
+    </script>
+</body>
+</html>
+

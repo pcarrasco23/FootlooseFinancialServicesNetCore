@@ -1,0 +1,12 @@
+.contact table {
+    border-collapse: collapse;
+}
+
+.contact table, th, td {
+    border: 1px solid #cccccc;
+    padding: 15px;
+}
+
+.contactform table, td, td {
+    border: 0;    
+}
